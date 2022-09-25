@@ -51,11 +51,11 @@
         {% for post in posts %}
         <div class="container-fluid p-1">
             {% comment %} <p>{{ post.description }}</p> {% endcomment %}
-            <img src="{{ post.image.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+            <img src="{{ post.image.url }}" class="img-fluid m-1" style="width: 100%; float: left; margin-right: 10px;" />
         </div>
         {% endfor %} 
     {% comment %} </div> {% endcomment %}
-    <footer class="bg-light text-center text-lg-start fixed-bottom">
+    <footer class="bg-light text-center text-lg-start">
       <div class="text-center p-3">
         © 2022 Copyright:
         <h1 class="text-dark">KuvaPaavot</h1>
