@@ -49,9 +49,9 @@
     </div>
     <div id="target" class="container-lg d-flex align-items-center justify-content-center">
         {% for post in posts %}
-        <div class="col-md-4">
+        <div class="col-md-4 p-3">
             {% comment %} <p>{{ post.description }}</p> {% endcomment %}
-            <img src="{{ post.image.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px; padding 4px 4px 4px 4px" />
+            <img src="{{ post.image.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
         </div>
         {% endfor %} 
     </div>
