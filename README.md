@@ -14,5 +14,6 @@ To Do:
 -thumbnailit
 
 -sivun responsiivisuus
+-visuaalisuus
 
 -tietoturva-aukkojen paikkaaminen
