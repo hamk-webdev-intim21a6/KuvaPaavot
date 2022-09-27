@@ -50,9 +50,9 @@
     </div>
     {% comment %} <div id="target" class="container-lg d-flex align-items-center justify-content-center"> {% endcomment %}
         {% for post in posts %}
-        <div class="container-fluid p-1">
+        <div id="wrapper" class="container-fluid p-1">
             {% comment %} <p>{{ post.description }}</p> {% endcomment %}
-            <img src="{{ post.image.url }}" class="img-fluid m-1" style="width: 100%; float: left; margin-right: 10px;" />
+            <img id="image" src="{{ post.image.url }}" class="img-fluid m-1"/>
         </div>
         {% endfor %} 
     {% comment %} </div> {% endcomment %}
