@@ -1,5 +1,6 @@
 {% extends "gallery/index.html"%}
 {% block jee %}
+<div class="container mx-auto">
 <h1>Image Upload</h1>
 <form method = "post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -8,4 +9,5 @@
 </form>
 
 <p><a href="{% url 'gallery:display_images' %}">Go back to main page</a></p>
+</div>
 {% endblock %}
