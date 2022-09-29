@@ -1,7 +1,10 @@
+from re import template
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Post
 from .forms import UploadForm
+from django.template import loader
+
 
 # Create your views here.
 
@@ -25,4 +28,6 @@ def image_upload(request):
 
 
 def success(request):
-    return render(request, 'gallery/success.html', {})
+    #return render(request, 'gallery/success.html', {})
+    template = loader.get_template('gallery/success.html')
+    return HttpResponse(template.render())
