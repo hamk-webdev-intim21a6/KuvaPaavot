@@ -6,8 +6,9 @@
 <p><a href="{% url 'gallery:display_images' %}">Go back to main page</a></p>
 </div>
 <form action="" method=POST></form>
-{% csrf_token %}
-<form>
+{% comment %} {% csrf_token %} {% endcomment %}
+<form method=POST>
+  {% csrf_token %}
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Username</label>
       <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
