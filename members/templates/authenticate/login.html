@@ -1,0 +1,21 @@
+{% extends 'gallery/index.html' %}
+{% block jee %}
+<div class="d-flex justify-content-center">
+<p>Thank you for uploading an image. I hope you didn't break any copyright laws.</p>
+<p><a href="{% url 'gallery:image_upload' %}">Upload more images</a></p>
+<p><a href="{% url 'gallery:display_images' %}">Go back to main page</a></p>
+</div>
+<form action="" method=POST></form>
+{% csrf_token %}
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+<input type="submit" value="Submit" class="btn btn-secondary">
+</form>
+{% endblock %}
