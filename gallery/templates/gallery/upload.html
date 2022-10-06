@@ -3,7 +3,7 @@
 <div class="container mx-auto">
 <h1>Image Upload</h1>
 {% if user.is_authenticated %}
-<form method = "post" enctype="multipart/form-data" style="max-width: 200px;">
+<form method = "post" enctype="multipart/form-data" style="max-height: 300px; max-width: 200px;">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Upload</button>
