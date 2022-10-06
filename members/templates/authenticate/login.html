@@ -1,9 +1,10 @@
 {% extends 'gallery/index.html' %}
 {% block jee %}
+<div class="container mx-auto">
 <p>Login user</p>
 <form action="" method=POST></form>
 {% comment %} {% csrf_token %} {% endcomment %}
-<form method=POST>
+<form method=POST style="max-width: 200px;">
   {% csrf_token %}
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Username</label>
@@ -15,4 +16,5 @@
     </div>
 <input type="submit" value="Submit" class="btn btn-secondary">
 </form>
+</div>
 {% endblock %}
