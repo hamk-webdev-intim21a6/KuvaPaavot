@@ -27,9 +27,15 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Modify</a>
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+            {% else %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'login' %}">Login</a>
             </li>
+            {% endif %}
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -49,7 +55,7 @@
         {% if messages %}
           {% for message in messages %}
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-              {{ message }} You should check in on some of those fields below.
+              {{ message }}
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
           {% endfor %}
@@ -71,16 +77,8 @@
       <div class="text-center p-3">
         © 2022 Copyright:
         <h1 class="text-dark">KuvaPaavot</h1>
-        {% if user.is_authenticated %}
-        <h1 class="text-dark">KuvaPaavot</h1>
-        <h1 class="text-dark">KuvaPaavot</h1>
-        <h1 class="text-dark">KuvaPaavot</h1>
-        <h1 class="text-dark">KuvaPaavot</h1>
-        {% endif %}
-
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>
-        
