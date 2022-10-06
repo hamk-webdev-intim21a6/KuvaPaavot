@@ -71,10 +71,24 @@
     {% comment %} <div id="target" class="container-lg d-flex align-items-center justify-content-center"> {% endcomment %}
       {% block jee %}  
       {% for post in posts %}
-        <div id="wrapper" class="container-fluid p-1">
+        <!-- <div id="wrapper" class="container-fluid p-1">
         
             {% comment %} <p>{{ post.description }}</p> {% endcomment %}
             <img id="image" src="{{ post.image.url }}" class="img-fluid"/>
+        </div> -->
+        <div class="d-flex flex-wrap album py-5 bg-light">
+          <div class="container flex-grow-1">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="card p-2" style="width: 18rem;">  
+                <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">  
+                  <div class="card-body">    
+                    <h5 class="card-title">Card title</h5>    
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       {% endfor %}
       {% endblock %} 
