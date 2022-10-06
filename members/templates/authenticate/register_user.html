@@ -5,12 +5,16 @@
 <p><a href="{% url 'gallery:display_images' %}">Go back to main page</a></p>
 </div>
 {% if form.errors %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        There was an error with your form.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 <p>There was an error with your form.</p>
 {% endif %}
 <p>Register new user</p>
 <form action="{% url 'register' %}" method=POST>
 {% csrf_token %}
-{{ form }}
+{{ form.as_p }}
 <input type="submit" value="Submit" class="btn btn-secondary">
 </form>
 {% endblock %}
