@@ -3,9 +3,13 @@
 25.9 tehty:
 Django serveri, gallery-appi, image-upload ominaisuus
 
-To Do:
+6.10 mennessä tehty:
 -uuden käyttäjätilin luominen
 -log-in/log-out
+-sivun responsiivisuus (osin)
+-tietoturva-aukkojen paikkaaminen (osin)
+
+To Do:
 
 -kuvaformaatin muuttaminen
 -kuvien deletointi
@@ -17,3 +21,4 @@ To Do:
 -visuaalisuus
 
 -tietoturva-aukkojen paikkaaminen
+
