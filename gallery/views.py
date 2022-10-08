@@ -26,7 +26,6 @@ def image_upload(request):
         form = UploadForm()
     return render(request, 'gallery/upload.html', {'form' : form})
 
-
 def success(request):
     #return render(request, 'gallery/success.html', {})
     template = loader.get_template('gallery/success.html')
