@@ -10,6 +10,18 @@
     padding: 10px;
 } */
 
+body {
+    background-color: #f8f9fa;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+#top_container {
+    background-color: lightgrey;
+}
+
 .card-img-top {
     min-height: 400px;
     max-height: 400px;
