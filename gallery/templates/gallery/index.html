@@ -29,7 +29,17 @@
             <a class="nav-link" href="{% url 'login' %}">Upload</a>
           </li>
           {% endif %}
-          {% if user.is_authenticated %}
+          {% if request.user.is_staff %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link">Currently logged in as: {{ request.user.username }}</p>
+          </li>
+          <li class="nav-item">
+            <p class="nav-link" href="{% url 'logout' %}">Admin panel</p>
+          </li>
+          {% elif user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
           </li>
