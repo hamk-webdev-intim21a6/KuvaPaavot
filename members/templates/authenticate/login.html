@@ -1,0 +1,20 @@
+{% extends 'gallery/index.html' %}
+{% block jee %}
+<div class="container mx-auto">
+<p>Login user</p>
+{% comment %} <form action="" method=POST></form>
+{% comment %} {% csrf_token %} {% endcomment %} 
+<form method=POST style="max-width: 200px;">
+  {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+  <input type="submit" value="Submit" class="btn btn-secondary">
+</form>
+</div>
+{% endblock %}

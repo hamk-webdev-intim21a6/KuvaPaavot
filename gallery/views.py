@@ -20,12 +20,13 @@ def image_upload(request):
     if request.method == 'POST':
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            image_upload = form.save(commit=False)
+            image_upload.author = request.user
+            image_upload.save()
             return redirect('gallery:success')
     else:
         form = UploadForm()
     return render(request, 'gallery/upload.html', {'form' : form})
-
 
 def success(request):
     #return render(request, 'gallery/success.html', {})
