@@ -34,9 +34,6 @@
             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
           </li>
           <li class="nav-item">
-            <p class="nav-link">Currently logged in as: {{ request.user.username }}</p>
-          </li>
-          <li class="nav-item">
             <p class="nav-link" href="{% url 'logout' %}">Admin panel</p>
           </li>
           {% elif user.is_authenticated %}
@@ -44,7 +41,7 @@
             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
           </li>
           <li class="nav-item">
-            <p class="nav-link">Currently logged in as: {{ request.user.username }}</p>
+            <!-- <p class="nav-link">Currently logged in as: {{ request.user.username }}</p> -->
           </li>
           {% else %}
           <li class="nav-item">
@@ -55,6 +52,11 @@
           </li>
           {% endif %}
         </ul>
+        {% if user.is_authenticated %}
+        <p> Currently logged in as: {{ request.user.username }} </p>
+        {% else %}
+        <p> You are not signed in. </p>
+        {% endif %}
         {% comment %} <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -106,7 +108,7 @@
                         <button class="btn btn-sm btn-outline-secondary" onclick="viewFunction()">View</button>
                           <script>
                             function viewFunction() {
-                              var myWindow = window.open("{{ post.image.url }}", "", "width=500,height=500");
+                              var myWindow = window.open("{{ post.image.url }}", "", "menubar=no,status=no,titlebar=no,toolbar=no,width=500,height=500");
                               }
                           </script>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
