@@ -34,7 +34,7 @@
             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
           </li>
           <li class="nav-item">
-            <p class="nav-link" href="{% url 'logout' %}">Admin panel</p>
+            <a class="nav-link" href="{% url 'admin:index' %}">Admin panel</a>
           </li>
           {% elif user.is_authenticated %}
           <li class="nav-item">
@@ -104,17 +104,12 @@
                   <p class="card-text">{{ post.description }}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <!-- <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ post.image.url }}">View</a> -->
-                        <button class="btn btn-sm btn-outline-secondary" onclick="viewFunction()">View</button>
-                          <script>
-                            function viewFunction() {
-                              var myWindow = window.open("{{ post.image.url }}", "", "menubar=no,status=no,titlebar=no,toolbar=no,width=500,height=500");
-                              }
-                          </script>
+                        <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ post.image.url }}" target="popup" onclick="window.open('{{ post.image.url }}','pic','width=600,height=400')">View</a>
+                        <!-- <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ post.image.url }}" target="_blank" rel="noopener noreferrer">View</a> -->
                         <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
                       </div>
-                      <small class="text-muted mx-1 justify-content-center">{{ post.pub_date|date:"d-M-Y H:i" }} {{ post.author }}</small>
                     </div>
+                    <p class="pub_date">{{ post.pub_date|date:"d-M-Y H:i" }} {{ post.author }}</p>
                 </div>
             </div>
           </div>

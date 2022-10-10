@@ -36,6 +36,11 @@ body {
     overflow: scroll;
 }
 
+.pub_date {
+    margin-top: 5px;
+    text-align: center;
+}
+
 .shrinkToFit {
     margin-top: 10px;
     margin-bottom: 10px;
