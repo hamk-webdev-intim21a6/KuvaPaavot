@@ -93,15 +93,15 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <!-- <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ post.image.url }}">View</a> -->
-                        <button class="btn btn-sm btn-outline-secondary" onclick="viewFunction()">Try it</button>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="viewFunction()">View</button>
                           <script>
                             function viewFunction() {
                               var myWindow = window.open("{{ post.image.url }}", "", "width=500,height=500");
                               }
                           </script>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
                       </div>
-                      <small class="text-muted mx-1 justify-content-center">{{ post.pub_date|date:"d-M-Y H:i" }} {{ post.author }}</small>
+                      <small class="text-muted mx-1 justify-content-center">{{ post.pub_date|date:"d-M-Y H:i" }} Uploader:{{ post.author }}</small>
                     </div>
                 </div>
             </div>
