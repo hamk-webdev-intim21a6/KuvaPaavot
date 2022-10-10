@@ -23,11 +23,17 @@ body {
 }
 
 .card-img-top {
-    min-height: 400px;
-    max-height: 400px;
+    min-height: 250px;
+    max-height: 250px;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
+.shrinkToFit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

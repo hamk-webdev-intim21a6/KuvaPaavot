@@ -92,7 +92,13 @@
                   <p class="card-text">{{ post.description }}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <!-- <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ post.image.url }}">View</a> -->
+                        <button onclick="myFunction()">Try it</button>
+                          <script>
+                            function myFunction() {
+                              var myWindow = window.open("{{ post.image.url }}", "", "width=500,height=500");
+                              }
+                          </script>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                       </div>
                       <small class="text-muted mx-1 justify-content-center">{{ post.pub_date|date:"d-M-Y H:i" }}</small>
