@@ -33,7 +33,7 @@ body {
 
 .card-text {
     height: 50px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .pub_date {
